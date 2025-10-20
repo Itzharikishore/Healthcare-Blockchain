@@ -1,23 +1,54 @@
 {
-  "name": "healthcare-blockchain",
-  "version": "1.0.0",
-  "description": "",
+  "name": "coalitioncom-2.0",
+  "version": "2.0.0",
+  "description": "Blockchain-Based Defense Intelligence Exchange with ZKP Validation, AI Threat Analytics, and Global Chain Anchoring",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "deploy-polygon": "hardhat run scripts/deploy.js --network polygon",
+    "start": "node backend/server.js",
+    "frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "dev": "concurrently \"npm run start\" \"npm run frontend\"",
+    "install-frontend": "cd frontend && npm install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "blockchain",
+    "defense",
+    "intelligence",
+    "zero-knowledge-proofs",
+    "dao",
+    "ai",
+    "cybersecurity",
+    "ipfs"
+  ],
+  "author": "CoalitionCom Team",
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "ipfs-http-client": "^60.0.1",
+    "axios": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ethers": "^6.4.0",
+    "web3": "^4.3.0",
+    "circomlib": "^2.0.5",
+    "snarkjs": "^0.7.0",
+    "concurrently": "^8.2.2"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "chai": "^4.2.0",
-    "ethers": "^6.4.0",
-    "hardhat": "^2.22.0"
+    "hardhat": "^2.22.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
   }
 }
